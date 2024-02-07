@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://d3i4yxtzktqr9n.cloudfront.net/uber-sites/99c4bc580c8b57b7.ico"
+    />
+    <style>
+      #map {
+        height: 100vh;
+        width: 50%;
+        float: right;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .input-container {
+        width: 45%;
+        float: left;
+        padding: 20px;
+        margin-top: 50px;
+      }
+      .title {
+        font-size: 40px;
+        margin: 10px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <title>Uber Clone - Map</title>
+  </head>
+  <body>
+    <header class="bg-dark">
+      <div class="container">
+        <nav>
+          <div>
+            <a href="/index.html" class="logo">Uber</a>
+            <ul class="nav-links">
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Safety</a></li>
+              <li><a href="/map.html">Go to map</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul id="nav-links" class="nav-links">
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Log in</a></li>
+              <li><a href="#" class="nav__cta">Sign up</a></li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <span class="hamburger-bar"></span
+            ><span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="input-container">
+      <h1 class="title">Find you'r Location</h1>
+      <input type="text" id="latitude" placeholder="Enter Latitude" />
+      <input type="text" id="longitude" placeholder="Enter Longitude" />
+      <button onclick="showLocation()">Show Location</button>
+    </div>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        // defaut  values for Delhi
+        var initialCoordinates = { lat: 28.7041, lng: 77.1025 };
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: initialCoordinates,
+          zoom: 10,
+        });
+      }
+
+      function showLocation() {
+        var latitude = parseFloat(document.getElementById("latitude").value);
+        var longitude = parseFloat(document.getElementById("longitude").value);
+
+        var location = { lat: latitude, lng: longitude };
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: location,
+          zoom: 10,
+        });
+
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
+    </script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHkfxmHjJeuhS55oLcrlmaPUtdPgBVszM&callback=initMap&v=3.exp&libraries=geometry,drawing,places"
+      async
+      defer
+    ></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
