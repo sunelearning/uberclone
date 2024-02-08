@@ -23,21 +23,23 @@
           <div>
             <a href="/index.html" class="logo">Uber</a>
             <ul class="nav-links">
+              <!-- End of login and signup links -->
               <li><a href="#">Company</a></li>
               <li><a href="#">Safety</a></li>
               <li><a href="/map.html">Go to map</a></li>
+              <!-- These are your login and signup links -->
+              <li id="loginLink"><a href="/form.html">Login</a></li>
             </ul>
           </div>
-          <div>
-            <ul id="nav-links" class="nav-links">
-              <li><a href="#">Products</a></li>
-              <!-- <li><a href="#">Log in</a></li>
-              <li><a href="#" class="nav__cta">Sign up</a></li> -->
-            </ul>
+          <div id="userContainer" class="nav-links" style="display: none">
+            <!-- User info will be dynamically inserted here -->
+            <li>Welcome, [Username]</li>
+            <li><button id="logoutBtn">Logout</button></li>
           </div>
+
           <div class="hamburger">
-            <span class="hamburger-bar"></span
-            ><span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
           </div>
         </nav>

@@ -14,6 +14,9 @@
       href="https://d3i4yxtzktqr9n.cloudfront.net/uber-sites/99c4bc580c8b57b7.ico"
     />
     <title>Uber Clone</title>
+    <style>
+      /* Your CSS styles here */
+    </style>
   </head>
   <body>
     <header class="bg-dark">
@@ -27,16 +30,12 @@
               <li><a href="/map.html">Go to map</a></li>
             </ul>
           </div>
-          <div>
-            <ul id="nav-links" class="nav-links">
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Log in</a></li>
-              <li><a href="#" class="nav__cta">Sign up</a></li>
-            </ul>
+          <div id="userContainer" class="nav-links" style="display: none">
+            <!-- User info will be dynamically inserted here -->
           </div>
           <div class="hamburger">
-            <span class="hamburger-bar"></span
-            ><span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
           </div>
         </nav>
@@ -79,10 +78,6 @@
           <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
           <!-- Added link to show login form -->
         </div>
-      </div>
-      <div id="userContainer" class="split" style="display: none">
-        <p id="loggedInUser"></p>
-        <button id="logoutBtn">Logout</button>
       </div>
     </div>
   </body>
