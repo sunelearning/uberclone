@@ -14,23 +14,25 @@
     />
     <style>
       #map {
-        height: 100vh;
-        width: 50%;
-        float: right;
+        height: 80vh; /* Adjusted height for better responsiveness */
+        width: 100%; /* Full width on all screens */
         border-radius: 8px;
+
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
 
       .input-container {
-        width: 45%;
-        float: left;
+        width: 100%; /* Full width on all screens */
         padding: 20px;
-        margin-top: 50px;
+        margin-top: 20px;
       }
+
       .title {
-        font-size: 40px;
-        margin: 10px;
+        font-size: 2rem; /* Responsive font size */
+        margin: 10px 0; /* Adjusted margin for better spacing */
+        text-align: center; /* Centered title */
       }
+
       input {
         width: 100%;
         padding: 10px;
@@ -51,6 +53,20 @@
 
       button:hover {
         background-color: #0056b3;
+      }
+
+      /* Media query for smaller screens */
+      @media (min-width: 768px) {
+        #map {
+          width: 60%; /* Adjusted width for larger screens */
+          float: right;
+        }
+        .input-container {
+          width: 30%;
+          height: 100%;
+          float: left;
+          margin-top: 50px;
+        }
       }
     </style>
     <title>Uber Clone - Map</title>
@@ -84,7 +100,7 @@
     </header>
 
     <div class="input-container">
-      <h1 class="title">Find you'r Location</h1>
+      <h1 class="title">Find Location</h1>
       <input type="text" id="latitude" placeholder="Enter Latitude" />
       <input type="text" id="longitude" placeholder="Enter Longitude" />
       <button onclick="showLocation()">Show Location</button>
@@ -93,7 +109,7 @@
 
     <script>
       function initMap() {
-        // defaut  values for Delhi
+        // default values for Delhi
         var initialCoordinates = { lat: 28.7041, lng: 77.1025 };
         var map = new google.maps.Map(document.getElementById("map"), {
           center: initialCoordinates,

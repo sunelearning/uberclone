@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./form.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="./form.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://d3i4yxtzktqr9n.cloudfront.net/uber-sites/99c4bc580c8b57b7.ico"
+    />
+    <title>Uber Clone</title>
+  </head>
+  <body>
+    <header class="bg-dark">
+      <div class="container">
+        <nav>
+          <div>
+            <a href="/index.html" class="logo">Uber</a>
+            <ul class="nav-links">
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Safety</a></li>
+              <li><a href="/map.html">Go to map</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul id="nav-links" class="nav-links">
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Log in</a></li>
+              <li><a href="#" class="nav__cta">Sign up</a></li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <span class="hamburger-bar"></span
+            ><span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div id="authContainer" class="split">
+        <div id="loginCard" class="card">
+          <h2>Login</h2>
+          <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Login</button>
+          </form>
+          <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+          <!-- Added link to show signup form -->
+        </div>
+        <div id="signupCard" class="card" style="display: none">
+          <h2>Sign Up</h2>
+          <form id="signupForm">
+            <input
+              type="text"
+              id="newUsername"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="password"
+              id="newPassword"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Sign Up</button>
+          </form>
+          <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+          <!-- Added link to show login form -->
+        </div>
+      </div>
+      <div id="userContainer" class="split" style="display: none">
+        <p id="loggedInUser"></p>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </body>
+</html>

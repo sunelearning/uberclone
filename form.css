@@ -1,0 +1,226 @@
+:root {
+  --clr-neutral-900: #000;
+  --clr-neutral-100: #fff;
+}
+
+/* RESET CSS */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+a {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+html {
+  font-family: Uber Move, Uber Move Text, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+::selection {
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+}
+
+h2,
+h3,
+h4 {
+  color: #333;
+}
+
+/*  UTILITY CLASSES */
+
+.bg-light {
+  background: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+}
+.bg-dark {
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+    gap: 2em;
+  }
+  .split > * {
+    flex-basis: 100%;
+  }
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  border-radius: 10px;
+  font-weight: 500;
+  line-height: 1;
+  transition: opacity 300ms ease;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+/* HEADER */
+
+header {
+  padding-block: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  transition: all 300ms ease;
+}
+header nav a:hover {
+  border-radius: 30px;
+  background: #333;
+}
+
+.nav-links,
+header nav div:first-of-type {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav__cta {
+  background: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+  border-radius: 30px;
+  padding: 0.75rem 1rem;
+}
+.nav__cta:hover {
+  background: var(--clr-neutral-100);
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger-bar {
+  display: block;
+  margin-top: 5px;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 50rem) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    gap: 0;
+    flex-direction: column;
+    background: var(--clr-neutral-900);
+    width: 100vw;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  .nav-links.active {
+    top: 70px;
+  }
+  .nav-links.active:first-child {
+    top: 220px;
+  }
+
+  header nav ul li {
+    margin: 1rem 0;
+  }
+}
+/* CSS styles for login and signup cards */
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+.card input[type="text"],
+.card input[type="password"],
+.card button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 768px) {
+  /* Adjustments for larger screens */
+  .split {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: calc(50% - 20px); /* Adjust width and margins */
+  }
+}
