@@ -185,6 +185,7 @@ header nav div:first-of-type {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+  margin-top: 200px;
 }
 
 .card h2 {
@@ -193,8 +194,7 @@ header nav div:first-of-type {
 }
 
 .card input[type="text"],
-.card input[type="password"],
-.card button {
+.card input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -203,14 +203,14 @@ header nav div:first-of-type {
 }
 
 .card button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  /* background-color: #007bff; */
+  /* color: #fff; */
+  /* border: none;
+  cursor: pointer; */
 }
 
 .card button:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
 }
 
 @media screen and (min-width: 768px) {
@@ -236,14 +236,24 @@ header nav div:first-of-type {
 }
 
 #logoutBtn {
-  background-color: #007bff;
+  /* background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 5px 10px; */
   cursor: pointer;
 }
 
 #logoutBtn:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
+}
+
+
+.buttonsRow{
+  display: flex;
+  align-items: baseline;
+}
+
+.buttonsRow p{
+  margin-left: auto;
 }
