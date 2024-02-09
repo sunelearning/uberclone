@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./form.css" />
+    <link rel="stylesheet" href="./buttonStyle.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="./form.js"></script>
@@ -47,35 +48,52 @@
           <h2>Login</h2>
           <form id="loginForm">
             <input type="text" id="username" placeholder="Username" required />
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              required
-            />
-            <button type="submit">Login</button>
+            <input type="password" id="password" placeholder="Password" required />
+            <div class="buttonsRow">
+              <button class="animated-button" type="submit">
+                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                  ></path>
+                </svg>
+                <span class="text">Login</span>
+                <span class="circle"></span>
+                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                  ></path>
+                </svg>
+              </button>            
+              <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+            </div>
           </form>
-          <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
           <!-- Added link to show signup form -->
         </div>
         <div id="signupCard" class="card" style="display: none">
           <h2>Sign Up</h2>
           <form id="signupForm">
-            <input
-              type="text"
-              id="newUsername"
-              placeholder="Username"
-              required
-            />
-            <input
-              type="password"
-              id="newPassword"
-              placeholder="Password"
-              required
-            />
-            <button type="submit">Sign Up</button>
+            <input type="text" id="newUsername" placeholder="Username" required />
+            <input type="password" id="newPassword" placeholder="Password" required />
+            <div class="buttonsRow">
+              <button class="animated-button" type="submit">
+                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                  ></path>
+                </svg>
+                <span class="text">Sign Up</span>
+                <span class="circle"></span>
+                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                  ></path>
+                </svg>
+              </button>            
+              <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+            <!-- <button type="submit">Sign Up</button> -->
           </form>
-          <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+          <!-- <p>Already have an account? <a href="#" id="showLogin">Login</a></p> -->
           <!-- Added link to show login form -->
         </div>
       </div>
