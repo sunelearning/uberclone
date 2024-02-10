@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showSignupForm() {
     loginCard.style.display = "none";
-    document.getElementById('signupCard').reset();
     signupCard.style.display = "block";
+    document.getElementById('signupCard').reset();
   }
 
   function showLoginForm() {
     signupCard.style.display = "none";
-    document.getElementById('loginForm').reset();
     loginCard.style.display = "block";
+    document.getElementById('loginForm').reset();
   }
 
   function showUserInfo(username) {
