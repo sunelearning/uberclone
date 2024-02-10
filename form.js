@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showSignupForm() {
     loginCard.style.display = "none";
+    document.getElementById('signupCard').reset();
     signupCard.style.display = "block";
   }
 
   function showLoginForm() {
     signupCard.style.display = "none";
+    document.getElementById('loginForm').reset();
     loginCard.style.display = "block";
   }
 
@@ -58,9 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userData && userData.password === password) {
       alert("Login successful!");
       localStorage.setItem("loggedInUser", username);
+      window.location.href = "index.html";
       showUserInfo(username);
     } else {
-      alert("Invalid username or password. Please register.");
+      alert("Invalid username or password. Click on Sign Up to register.");
     }
   });
 
