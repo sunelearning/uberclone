@@ -12,6 +12,7 @@
       type="image/x-icon"
       href="https://d3i4yxtzktqr9n.cloudfront.net/uber-sites/99c4bc580c8b57b7.ico"
     />
+    <link rel="stylesheet" href="./buttonStyle.css" />
     <style>
       #map {
         height: 80vh; /* Adjusted height for better responsiveness */
@@ -41,28 +42,14 @@
         border-radius: 5px;
       }
 
-      button {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #0056b3;
-      }
-
       /* Media query for smaller screens */
       @media (min-width: 768px) {
         #map {
-          width: 60%; /* Adjusted width for larger screens */
+          width: 80%; /* Adjusted width for larger screens */
           float: right;
         }
         .input-container {
-          width: 30%;
+          width: 20%;
           height: 100%;
           float: left;
           margin-top: 50px;
@@ -90,10 +77,25 @@
     </header>
 
     <div class="input-container">
-      <h1 class="title">Find Location</h1>
+      <center>
+        <img src="./assets/images/sic_long_logo.png" alt="Avatar"> 
+        <h1 class="title">Find Location</h1>
+      </center>
       <input type="text" id="latitude" placeholder="Enter Latitude" />
       <input type="text" id="longitude" placeholder="Enter Longitude" />
-      <button onclick="showLocation()">Show Location</button>
+      <center style="margin-top: 10px;">
+        <button class="animated-button" onclick="showLocation()">
+          <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+          </svg>
+          <span class="text">Sign Up</span>
+          <span class="circle"></span>
+          <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+          </svg>
+        </button>
+      </center>
+      <!-- <button onclick="showLocation()">Show Location</button> -->
     </div>
     <div id="map"></div>
 
