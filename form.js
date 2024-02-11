@@ -58,12 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const userData = JSON.parse(localStorage.getItem(username));
 
     if (userData && userData.password === password) {
-      alert("Login successful!");
+      Swal.fire("Login successful!");
       localStorage.setItem("loggedInUser", username);
       window.location.href = "index.html";
       showUserInfo(username);
     } else {
-      alert("Invalid username or password. Click on Sign Up to register.");
+      Swal.fire("Invalid username or password. Click on Sign Up to register.");
     }
   });
 
@@ -73,12 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const newPassword = document.getElementById("newPassword").value;
 
     if (!newUsername || !newPassword) {
-      alert("Please enter both username and password.");
+      Swal.fire("Please enter both username and password.");
       return;
     }
 
     if (localStorage.getItem(newUsername)) {
-      alert("Username already exists. Please choose another.");
+      Swal.fire("Username already exists. Please choose another.");
       return;
     }
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     localStorage.setItem(newUsername, JSON.stringify(userData));
 
-    alert("Signup successful!");
+    Swal.fire("Signup successful!");
     showLoginForm();
   });
 
